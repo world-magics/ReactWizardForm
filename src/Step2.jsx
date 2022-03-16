@@ -4,7 +4,22 @@ function Step2(props){
     if(props.currentStep!==2){
         return null
     }
-    return <h1>Step 2 Component</h1>
+    return (
+        <div className="form-group">
+            <label htmlFor="username">
+                Username
+            </label>
+            <input 
+            type="text"
+            className='form-control'
+            id='username'
+            name='username'
+            placeholder='Enter username'
+            value={props.value}
+            onChange={props.handleChange}
+            />
+        </div>
+    )
   
 }
 
